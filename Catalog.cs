@@ -17,7 +17,7 @@ class Catalog{
         Console.WriteLine("Movie registered successfully");
     }
 
-    public void ListMovies()
+    public void ShowMoviesList()
     {
         for(int i = 0; i < movies.Count; i++)
         {
@@ -34,7 +34,7 @@ class Catalog{
         {
             if (movie.Title.Equals(title, StringComparision.OrdinalIgnoreCase))
             {
-                movie.Sh
+                movie.ShowDetails();
             }
         }
     }

@@ -20,6 +20,10 @@ class Program{
                 break;
             case 2:
                 Movie.ShowMovieInformation();
+                break;
+            case 3:
+                Movie.ShowMoviesList();
+
         }
 
 
