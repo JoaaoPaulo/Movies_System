@@ -1,7 +1,7 @@
 class Catalog{
 
 
-    public List<Movie> movies = new List<Movie>();
+    private List<Movie> movies = new List<Movie>();
 
     public void RegisterMovie(){
         Console.Write("Title: ");
@@ -15,6 +15,8 @@ class Catalog{
         movies.Add(movie);
 
         Console.WriteLine("Movie registered successfully");
+
+        Program.ShowMenu();
     }
 
     public void ShowMoviesList()
@@ -23,6 +25,8 @@ class Catalog{
         {
             Console.WriteLine($"{i + 1} - {movies[i].Title}"); 
         }
+
+        Program.ShowMenu();
     }
 
     public void ShowMovieInformation()
@@ -37,5 +41,7 @@ class Catalog{
                 movie.ShowDetails();
             }
         }
+
+        Program.ShowMenu();
     }
 }

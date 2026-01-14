@@ -19,11 +19,11 @@ class Program{
                 Catalog.RegisterMovie();
                 break;
             case 2:
-                Movie.ShowMovieInformation();
+                Catalog.ShowMovieInformation();
                 break;
             case 3:
                 Movie.ShowMoviesList();
-
+                break;
         }
 
 
