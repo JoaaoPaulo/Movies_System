@@ -1,7 +1,10 @@
+using System.Collections.Generic;
+using System.Threading;
+
 class Catalog{
 
 
-    private List<Movie> movies = new List<Movie>();
+    private  List<Movie> movies = new List<Movie>();
 
     public void RegisterMovie(){
         Console.Write("Title: ");
@@ -15,8 +18,7 @@ class Catalog{
         movies.Add(movie);
 
         Console.WriteLine("Movie registered successfully");
-
-        Program.ShowMenu();
+        Thread.Sleep(2000);
     }
 
     public void ShowMoviesList()
@@ -25,23 +27,19 @@ class Catalog{
         {
             Console.WriteLine($"{i + 1} - {movies[i].Title}"); 
         }
-
-        Program.ShowMenu();
     }
 
     public void ShowMovieInformation()
     {
         Console.Write("Movie title:");
-        title = Console.ReadLine();
+        string title = Console.ReadLine();
 
         foreach (Movie movie in movies)
         {
-            if (movie.Title.Equals(title, StringComparision.OrdinalIgnoreCase))
+            if (movie.Title.Equals(title, StringComparison.OrdinalIgnoreCase))
             {
                 movie.ShowDetails();
             }
         }
-
-        Program.ShowMenu();
     }
 }

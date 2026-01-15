@@ -13,10 +13,10 @@ class Movie{
 
     public void ShowDetails()
     {
-        Console.Writeline("----Movie Information----");
-        Console.Writeline($"Title: {Title}");
-        Console.Writeline($"Duration: {Duration}");
-        Console.Writeline($"Synopsis: {Synopsis}");
+        Console.WriteLine("----Movie Information----");
+        Console.WriteLine($"Title: {Title}");
+        Console.WriteLine($"Duration: {Duration}");
+        Console.WriteLine($"Synopsis: {Synopsis}");
     }
     
 }
